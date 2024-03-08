@@ -76,7 +76,8 @@ function onPageLoad() {
             // }
             console.log(review.profile.image);
             // images path
-            var image = "images.jpg";
+            var image = "./images.jpg";
+            console.log(image);
             if ((review.profile.image !== undefined)) {
               image = review.profile.image;
             }
