@@ -75,11 +75,13 @@ function onPageLoad() {
             //    getElementById("user-img").src = review.profile.image;
             // }
             console.log(review.profile.image);
+            // images path
             var image = "images.jpg";
             if ((review.profile.image !== undefined)) {
               image = review.profile.image;
             }
             console.log(image);
+
 
             data4[parseInt(review.rating) - 1]++;
 
