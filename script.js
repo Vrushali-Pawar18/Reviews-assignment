@@ -90,13 +90,14 @@ function onPageLoad() {
             data5 = "";
             console.log("The Rating is" + review.rating);
             for (let i = 0; i < 5; i++) {
+              console.log(i);
               if (i < parseInt(review.rating)+0.5) {
                 data5 += `<h class="bi bi-star-fill fs-6" id="filled-star"></h>`;
               } 
-              else if( i== parseInt(review.rating)+0.5){
-                data5 += `<h class="bi-star-half fs-3 " id="filled-star"></h>`
+              // else if( i== parseInt(review.rating)){
+              //   data5 += `<h class="bi-star-half fs-3 " id="filled-star"></h>`
             
-              }
+              // }
               else {
                 data5 += `<h class="bi empty fs-6" id="filled-star"></h>`;
               }
@@ -156,9 +157,9 @@ function onPageLoad() {
 
 
           total = asin.reviews.length;
-          // let rating = Math.round(parseFloat(asin.summary.rating));
-          // console.log(rating);
-          //console.log(data4);
+          let rating = Math.round(parseFloat(asin.summary.rating));
+          console.log(rating);
+          console.log(data4);
           
           for (let i = 0; i < 5; i++) {
             if (i < asin.summary.rating) {
