@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js"> </script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- <style>
+        /* Define rotation transformation */
+        .rotate {
+            transform: rotate(90deg);
+        }
+        </style> -->
+    <title></title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-end align-items-end">
+            <div class="col align-items-end" id="pr_rating">
+                3.9
+            </div>
+        </div>
+        <div class="row align-items-center" id="rev">
+            <div class="col" id="pr_rev">
+                <h3>Product Reviews</h3>
+                <!-- <hr class="d-flex" ></hr> -->
+            </div>
+            <div class="col d-flex justify-content-end align-items-center" id="pr_star">
+                <!-- ***** -->
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg> -->
+                <div class="d-flex justify-content-end align-items-center">
+                    <div class="str">
+                        <div class="star-rat align-items-start" id="filled-star-rat">
+                            <h class="bi bi-star-fill fs-3" id="filled-star"></h>
+                            <h class="bi bi-star-fill fs-3" id="filled-star"></h>
+                            <h class="bi bi-star-fill fs-3" id="filled-star"></h>
+                            <h class="bi bi-star-fill fs-3 bi-star-half" id="filled-star"></h>
+                            <h class="bi empty fs-3" id="filled-star"></h>
+                        </div>
+
+
+                    </div>
+                    <div class="total_rev align-items-end" id="all-rev">
+
+                        (10)
+                    </div>
+                    <div>
+                        <p>
+                            <button class="btn btn-primary d-flex justify-content-end align-items-center"
+                                id="collapse_btn" type="button" data-bs-toggle="collapse" onclick="rotate()"
+                                data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                <div class="btn-arrow" id="btn-ar">
+                                    ^    <i class="fa-solid fa-star text-white" ></i>
+                                    <i class="fa-solid fa-star-half-stroke text-white"></i>           
+                                 
+                                </div>
+
+                            </button>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <hr id="line2">
+        </hr>
+        <div class="row d-flex justify-content-center">
+            <div class="collapse col mx-auto" id="collapseExample">
+                <div class="card card-body" id="collapse1">
+                    <div class="row align-items-center">
+                        <div class="col-1" id="star-5">
+                            <h class="bi bi-star-fill fs-5" id="filled-star"></h>
+                            5
+                        </div>
+                        <progress value="0" max="100" class="col-10" id="progress-5"></progress>
+                        <div class="col-1" id="rev-5">
+                            0 Reviews
+                        </div>
+                    </div>
+                    <br>
+                    <!-- //**************************************************************************************************************** -->
+                    <div class="row align-items-center">
+                        <div class="col-1" id="star-4">
+                            <h class="bi bi-star-fill fs-5" id="filled-star"></h>
+                            4
+                        </div>
+                        <progress value="0" max="100" class="col-10" id="progress-4"></progress>
+                        <div class="col-1" id="rev-4">
+                            0 Reviews
+                        </div>
+                    </div>
+                    <br>
+                    <!-- ********************************************************************************************************************** -->
+                    <div class="row align-items-center">
+                        <div class="col-1" id="star-3">
+                            <h class="bi bi-star-fill fs-5" id="filled-star"></h>
+                            3
+                        </div>
+                        <progress value="0" max="100" class="col-10" id="progress-3"></progress>
+                        <div class="col-1" id="rev-3">
+                            0 Reviews
+                        </div>
+                    </div>
+                    <br>
+                    <!-- /************************************************************************************************************************************* -->
+                    <div class="row align-items-center">
+                        <div class="col-1" id="star-2">
+                            <h class="bi bi-star-fill fs-5" id="filled-star"></h>
+                            2
+                        </div>
+                        <progress value="0" max="100" class="col-10" id="progress-2"></progress>
+                        <div class="col-1" id="rev-2">
+                            0 Reviews
+                        </div>
+                    </div>
+                    <br>
+                    <!-- ************************************************************************************************************************* -->
+                    <div class="row align-items-center">
+                        <div class="col-1" id="star-1">
+                            <h class="bi bi-star-fill fs-5" id="filled-star"></h>
+                            1
+                        </div>
+                        <progress value="0" max="100" class="col-10" id="progress-1"></progress>
+                        <div class="col-1" id="rev-1">
+                            0 Reviews
+                        </div>
+                    </div>
+                </div>
+                <hr id="line">
+                </hr>
+
+            </div>
+        </div>
+    </div>
+    <div class="rev-container" id="reviews-container">
+        <div class="img-add-rat" id="Customer1">
+            <!-- <div class="img-add-c" id="im-add"> -->
+            <!-- <div class='img position-relative d-flex' id="User-img">
+                    <img src="images.jpg" id="img" alt="Rounded circle Image" class="rounded-circle" width='45'
+                        height='45'>
+                    <img src="amazon.png" alt="Amazon-img" class="rounded-circle align-self-end" id="amzn-img"
+                        width="15" height="15">
+
+                </div> -->
+        </div>
+        <div class="name_add" id="n-ad">
+            <!-- <div class="name" id="name">
+                    <h>Amazon Customer</h>
+                </div> -->
+            <div class="address" id="add">
+                <!-- <p>
+                        United Kingdom of Great Britain and Northern Ireland
+                    </p> -->
+            </div>
+        </div>
+        <div class="star-date-rev-desc" id="user">
+            <div class="star-date" id="data">
+                <div class="newstar" id="nstar">
+                    <h class="bi bi-star-fill fs-6" id="filled-star"></h>
+                    <h class="bi bi-star-fill fs-6" id="filled-star"></h>
+                    <h class="bi bi-star-fill fs-6" id="filled-star"></h>
+                    <h class="bi bi-star-fill fs-6" id="filled-star"></h>
+                    <h class="bi empty fs-6" id="filled-star"></h>
+                </div>
+                <div class="date" id="date">
+                    <!-- <h>
+                            Jan 12, 2024
+                        </h> -->
+                </div>
+            </div>
+            <div class="rev" id="rev-title1">
+                <!-- <h5>
+                        Fantastic product
+                    </h5> -->
+            </div>
+            <div class="rev2 d-flex" id="rev-title2">
+                <!-- <p>
+                        Easy to use, no mess, and cleans fantastically
+                    </p> -->
+            </div>
+        </div>
+    </div>
+    <!-- <div class="img-add-rat d-flex align-items-start">
+            <div class="img-add-c">
+                <div class='img position-relative d-flex' id="User-img">
+                    <img src="images.jpg" alt="Rounded circle Image" class="rounded-circle" width='45' height='45'>
+                    <img src="amazon.png" alt="Amazon-img" class="rounded-circle align-self-end" id="amzn-img"
+                        width="15" height="15">
+
+                </div>
+            </div>
+            <div class="name_add" id="n-ad">
+                <div class="name" id="name">
+                    <h>Mehmet-Akif K.</h>
+                </div>
+                <div class="add" id="add">
+                    <h>
+                        Germany
+                    </h>
+                </div>
+            </div>
+
+
+            <div class="star-date-rev-desc" id="user">
+                <div class="star-date2" id="data">
+                    <div class="nstar2" id="nstar">
+                        <h class="bi bi-star-fill fs-6" id="filled-star"></h>
+                        <h class="bi bi-star-fill fs-6" id="filled-star"></h>
+                        <h class="bi bi-star-fill fs-6" id="filled-star"></h>
+                        <h class="bi bi-star-fill fs-6" id="filled-star"></h>
+                        <h class="bi bi-star-fill fs-6" id="filled-star"></h>
+                    </div>
+                    <div class="date-2" id="date">
+                        <h>
+                            Feb 10, 2024
+                        </h>
+                    </div>
+                </div>
+                <div class="rev2" id="rev-title1">
+                    <h5>
+                        asdfghjmnbv are wah masta product
+                    </h5>
+                </div>
+                <div class="rev2-1" id="rev-title2">
+                    <p>
+                        Funktioniert sehr gut vorallem Sehr einfach und schnell
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="img-add-rat d-flex justify-content-start align-items-start">
+            <div class="img-add-c">
+                <div class='img position-relative d-flex' id="User-img">
+                    <img src="images.jpg" alt="Rounded circle Image" class="rounded-circle" width='45' height='45'>
+                    <img src="amazon.png" alt="Amazon-img" class="rounded-circle align-self-end" id="amzn-img"
+                        width="15" height="15">
+
+                </div>
+            </div>
+            <div class="name_add" id="n-ad">
+                <div class="name" id="name">
+                    <h>Mehmet-Akif K.</h>
+                </div>
+                <div class="add" id="add">
+                    <h>
+                        Germany</h>
+                </div>
+            </div>
+
+
+            <div class="star-date-rev-desc" id="user">
+                <div class="star-date2" id="data">
+                    <div class="nstar2" id="nstar">
+                        <h class="bi bi-star-fill fs-6" id="filled-star"></h>
+                        <h class="bi bi-star-fill fs-6" id="filled-star"></h>
+                        <h class="bi bi-star-fill fs-6" id="filled-star"></h>
+                        <h class="bi bi-star-fill fs-6" id="filled-star"></h>
+                        <h class="bi bi-star-fill fs-6" id="filled-star"></h>
+                    </div>
+                    <div class="date-2" id="date">
+                        <h>
+                            Feb 10, 2024
+                        </h>
+                    </div>
+                </div>
+                <div class="rev2" id="rev-title1">
+                    <h5>
+                        🤩
+                    </h5>
+                </div>
+                <div class="rev2-1" id="rev-title2">
+                    <p>
+                        Funktioniert sehr gut vorallem Sehr einfach und schnell
+                    </p>
+                </div>
+            </div>
+
+        </div> -->
+    </div>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://kit.fontawesome.com/7f5eea558c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script src="script.js"></script>
+</body>
+
+
+</html>
