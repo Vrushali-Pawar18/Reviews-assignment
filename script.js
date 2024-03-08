@@ -91,7 +91,7 @@ function onPageLoad() {
             console.log("The Rating is" + review.rating);
             for (let i = 0; i < 5; i++) {
               console.log(i);
-              if (i < parseInt(review.rating)+0.5) {
+              if (i < parseInt(review.rating)) {
                 data5 += `<h class="bi bi-star-fill fs-6" id="filled-star"></h>`;
               } 
               // else if( i== parseInt(review.rating)){
