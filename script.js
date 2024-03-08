@@ -23,7 +23,7 @@ function onPageLoad() {
       return response.json();
     })
     .then(userData => {
-      const asinNum = "B07T26CHXV";
+      const asinNum = "B09NBYWBYP";
       userData.forEach(asin => {
         if (asin.asin === asinNum) {
           console.log('Rating:', asin.summary.rating);
@@ -87,9 +87,14 @@ function onPageLoad() {
             data5 = "";
             console.log("The Rating is" + review.rating);
             for (let i = 0; i < 5; i++) {
-              if (i < parseInt(review.rating)) {
+              if (i < parseInt(review.rating)+0.5) {
                 data5 += `<h class="bi bi-star-fill fs-6" id="filled-star"></h>`;
-              } else {
+              } 
+              else if( i== parseInt(review.rating)+0.5){
+                data5 += `<h class="bi-star-half fs-3 " id="filled-star"></h>`
+            
+              }
+              else {
                 data5 += `<h class="bi empty fs-6" id="filled-star"></h>`;
               }
             }
@@ -151,6 +156,7 @@ function onPageLoad() {
           // let rating = Math.round(parseFloat(asin.summary.rating));
           // console.log(rating);
           //console.log(data4);
+          
           for (let i = 0; i < 5; i++) {
             if (i < asin.summary.rating) {
               data3 += `<h class="bi bi-star-fill  fs-3" id="filled-star"></h>`;
