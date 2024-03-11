@@ -5,7 +5,7 @@ body {
 #pr_rating {
   /* float: right; */
   color: white;
-  margin-right: 150px;
+  margin-right: 170px;
   margin-bottom: -20px;
   text-align: right;
   font-size: x-large;
@@ -34,6 +34,8 @@ body {
 #line2 {
   color: white;
   /* width: 3000px; */
+  /* margin-top: -1000; */
+  text-align: start;
 }
 
 #line {
@@ -68,6 +70,7 @@ progress::-webkit-progress-value {
   display: flex;
   /* justify-content: space-between; */
   margin-top: 5px;
+  border: transparent;
 }
 
 #star-5 {
@@ -186,9 +189,11 @@ progress::-webkit-progress-value {
   #User-img {
     border-radius: 50%;
     background-color: black;
-    width: 80px;
+    width: 40px;
     /* margin-left: 545px; */
     /* display: inline-block; */
+    margin-top: 4px;  
+    margin-left: 14px;
   }
   
   .img-add-c {
@@ -204,6 +209,7 @@ progress::-webkit-progress-value {
     /* text-align: center; */
     /* margin-left: 60px; */
     /* margin-bottom: 460px; */
+    margin-top: 5px;
   }
   
   #add {
@@ -227,7 +233,7 @@ progress::-webkit-progress-value {
   }
   
   #user {
-    margin-top: -5px;
+    margin-top: 2px;
     display: inline-block;
     /* margin-left: 250px; */
   }
@@ -241,10 +247,10 @@ progress::-webkit-progress-value {
     width: 200px;
     text-align: left;
     display: inline-block;
-    /* margin-left: 0px; */
+    margin-left: 18px;
     /* margin-top: 150px; */
 
-    font-size: medium;
+    font-size: small;
   }
   
   /* #nstar {
@@ -258,6 +264,7 @@ progress::-webkit-progress-value {
     /* color: white; */
     size: 100px;
   }
+ 
   
   #filled-star-rat {
     margin-right: 30px;
@@ -327,8 +334,11 @@ progress::-webkit-progress-value {
 
 #collapse_btn {
   background-color: transparent;
-  border-color: black;
-
+  border-color: transparent;
+  
+}
+#collapse_btn:focus {
+  box-shadow: none;
 }
 
 /* #filled-star::before {
@@ -342,13 +352,166 @@ progress::-webkit-progress-value {
 } */
 
 #all-rev {
-  margin-top: 10px;
-  margin-left: -20px;
+  margin-top: 6px;
+  /* margin-left: -10px ; */
+  margin-left: -10px;
+  text-align: left;
 }
 
 .btn-arrow {
   margin-top: 20px;
+  margin-left: -5px;
+  color: white;
 }
 /* #empty-star{
   color: gray;
 } */
+
+
+.star-rating, .back-stars, .front-stars {
+  display: flex;
+}
+.star-rating {
+  align-items: center;
+  font-size: 20px;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: -200px;
+}
+.back-stars {
+  color: grey;
+  position: relative;
+}
+.front-stars {
+  color: white;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}   
+
+
+
+.star-rating-rev, .back-stars-rev, .front-stars-rev {
+  display: flex;
+}
+.star-rating-rev {
+  font-size: 15px;
+  /* margin-top: -0px;  */
+  /* margin-left: 0px;  */
+}
+.back-stars-rev {
+  color: grey;
+  position: relative;
+  /* text-shadow: 4px 4px 10px #843a3a; */
+}
+.front-stars-rev {
+  color: white;
+  overflow: hidden;
+  position: absolute;
+  /* text-shadow: 2px 2px 5px #d29b09; */
+  /* top: 0;  */
+  /* transition: all 0.5s; */
+}   
+
+
+:root {
+  --star-size: 35px;
+  --star-color: #fff;
+  --star-background: white;
+}
+
+#stars-b {
+  --percent: calc(var(--rating) / 5 * 100%);
+  display: inline-block;
+  font-size: var(--star-size);    
+  font-family: Times;
+  line-height: 1;
+  text-align:left;        
+  letter-spacing:0px;
+  /* padding-left:0px; */
+  margin-right : 18px;
+  /* margin-top: -350px; */
+}
+
+#stars-b::before {
+  content: '★★★★★';
+  letter-spacing:-0px;
+  background:
+    linear-gradient(90deg, var(--star-background) 0%, var(--star-background) var(--percent), gray var(--percent), gray 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translatey(60px);
+  /* display: block;  */
+  position: relative;
+  font-family: Times;
+  /* margin-top: -140px;        */
+}
+
+
+
+
+#stars-box {
+  --percent: calc(var(--rating) / 5 * 100%);
+  display: inline-block;
+  font-size: var(--star-size);    
+  font-family: Times;
+  line-height: 1;
+  text-align:left;        
+  letter-spacing:0px;
+  padding-left:0px;
+  padding-right:0px;
+  /* margin-top: -500; */
+}
+
+#stars-box::before {
+  content: '★★★★★';
+  letter-spacing:-0px;
+  background:
+    linear-gradient(90deg, var(--star-background) 0%, var(--star-background) var(--percent), gray var(--percent), gray 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translatey(60px);
+  /* display: block;  */
+  position: relative;
+  font-family: Times;
+}
+
+
+
+
+
+
+
+
+
+/* 
+// // Function to generate SVG star
+// function createStar(fillColor) {
+//   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="${fillColor}"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>`;
+// }
+
+// // Function to render star rating
+// function renderStarRating(rating, containerId) {
+//   const container = document.getElementById(containerId);
+//   container.innerHTML = ''; // Clear previous stars
+
+//   const maxRating = 5; // Maximum rating
+//   const starColor = "#ffd700"; // Star color
+//   const emptyStarColor = "#cccccc"; // Empty star color
+
+//   // Generate filled stars
+//   for (let i = 0; i < rating; i++) {
+//     container.innerHTML += createStar(starColor);
+//   }
+
+//   // Generate empty stars for the remaining
+//   for (let i = rating; i < maxRating; i++) {
+//     container.innerHTML += createStar(emptyStarColor);
+//   }
+// }
+
+// // Example usage:
+// const rating = 3; // Example rating value
+// renderStarRating(rating, 'star-rating'); */
